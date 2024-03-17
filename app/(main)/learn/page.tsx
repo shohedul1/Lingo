@@ -1,9 +1,13 @@
-import React from 'react'
 
-const page = () => {
+import React from 'react'
+import FristSection from './_components/frist-section'
+
+const LearnPage = () => {
   return (
-    <div className='text-5xl text-yellow-500'>I Love you maya beging to end</div>
+   <div>
+    <FristSection />
+   </div>
   )
 }
 
-export default page
+export default LearnPage
