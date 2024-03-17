@@ -19,7 +19,7 @@ const tabs = [
     {
         icon: (<PiBookOpenText className="text-3xl mr-2 text-purple-600 bg-purple-100 p-1 rounded" />),
         name: "AI",
-        description: "Ask literally anything. Notion will answer",
+        description: "Ask literally anything.",
         mone: (
             <div className="text-purple-600 flex items-center">
                 Learn more <PiArrowRight className="text-sm ml-1" />
@@ -30,7 +30,7 @@ const tabs = [
     {
         icon: (<PiFileThin className="text-3xl mr-2 text-red-600 bg-red-100 p-1 rounded" />),
         name: "Docs",
-        description: "Simple, powerful, beautiful. Next-gen notes & docs.",
+        description: "Simple, powerful, beautiful. ",
         mone: (
             <div className="text-red-600 flex items-center">
                 Learn more <PiArrowRight className="text-sm ml-1" />
