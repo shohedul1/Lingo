@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 import { useMediaQuery } from 'react-responsive';
 
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 import { LiaRProject } from "react-icons/lia";
 import { FaCalendarAlt } from "react-icons/fa";
 
@@ -73,13 +73,23 @@ const tabs = [
     }
 ]
 
+type Tab = {
+    icon: JSX.Element;
+    name: string;
+    description: string;
+    mone: React.ReactNode;
+    image: string;
+
+}
+
 
 const FristSection = () => {
-    const [activeTab, setActioveTab] = useState(tabs[0]);
+    const ref = useRef(null);
+    const [activeTab, setActioveTab] = useState<Tab>(tabs[0]);
 
-    const isSmallScreen = useMediaQuery({ maxWidth: 767 })
+    const isSmallScreen = useMediaQuery({ maxWidth: 768 });
     return (
-        <div className="md:items-center flex flex-col bg-red-50">
+        <div className="md:items-center flex flex-col bg-red-50 pb-5">
             <div className="font-medium 2xl:w-1/3 xl:w-1/2 md:w-2/3 lg:px-0 px-8 text-5xl xl:text-6xl flex justify-center xl:pt-14 text-center pt-6">
                 Write, plan, share.<br /> With AI at your side.
 
@@ -204,7 +214,7 @@ const FristSection = () => {
             )}
 
             {/* display content based on the action tab on kedium size screens and bigger */}
-            <div className="hidden md:flex p-[50px] bg-slate-100 w-[500px] items-center justify-center relative mb-5">
+            <div className="hidden lg:flex p-[50px] bg-slate-100 w-[500px] items-center justify-center relative mb-5">
                 {activeTab && (
                     <Image src={activeTab.image}
                         alt={activeTab.name}
