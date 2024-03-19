@@ -1,9 +1,15 @@
+'use client';
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const FourSection = () => {
+    const router = useRouter();
+    const handleClick = ()=>{
+         router.push('/leaderboard/overview');
+    }
     return (
         <div className='flex flex-col bg-[#c0bfbf] py-20'>
             <div className='flex flex-col gap-2 items-center justify-center text-center md:justify-start md:text-start md:items-start md:px-10'>
@@ -19,10 +25,12 @@ const FourSection = () => {
                     <h1 className='text-5xl font-bold text-white'>Timeline</h1>
                     <p className='text-2xl font-bold text-[#f1e1e1] pt-10'>Connect strategic goals to the teams that help achieve them. See progress in real time, update stakeholders, and keep the company on track.</p>
                     <div className="flex items-center border-b pt-20">
-                            <Button>
+                        
+                            <Button onClick={handleClick}>
                                  Get Started 
                                  <ArrowRight className="w-6 h-6" />
                             </Button>
+                         
                             
                         </div>
                 </div>

@@ -88,6 +88,10 @@ const FristSection = () => {
     const [activeTab, setActioveTab] = useState<Tab>(tabs[0]);
 
     const isSmallScreen = useMediaQuery({ maxWidth: 768 });
+
+    const handleButtonClick = () => {
+        window.open('/leaderboard/contact'); 
+    };
     return (
         <div className="md:items-center flex flex-col bg-red-50 pb-5">
             <div className="font-medium 2xl:w-1/3 xl:w-1/2 md:w-2/3 lg:px-0 px-8 text-5xl xl:text-6xl flex justify-center xl:pt-14 text-center pt-6">
@@ -100,23 +104,22 @@ const FristSection = () => {
             </p>
 
             <div className="flex gap-4 pt-6 items-center justify-center">
-                <Link href={"#"}>
+               
                     <Button variant={'primary'} size={'sm'}>
                         <div className="flex items-center justify-center">
-                            Get Notion free
+                            Get Dev.Sp free
                             <div className="ml-2"><PiArrowRight /></div>
                         </div>
                     </Button>
-                </Link>
-                <Link href={"/#"}>
-                    <Button variant={'secondary'} size={'sm'}>
+               
+                    <Button variant={'secondary'} size={'sm'} onClick={handleButtonClick}>
                         <div className="flex items-center justify-center">
                             Request a demo
                             <div className="ml-2"><PiArrowRight /></div>
                         </div>
 
                     </Button>
-                </Link>
+               
             </div>
 
             <div className="pt-10 xl:pt-20 items-center justify-center">

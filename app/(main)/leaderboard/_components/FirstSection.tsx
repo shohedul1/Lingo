@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/button";
 
 
 function FirstSction() {
+
+    const handleClick = ()=>{
+        window.open("/leaderboard/contact");
+    };
     return (
         <section className=" bg-[#E5E4E2] py-10">
             <div className="container mx-auto text-center w-3/5 pt-[30px]">
@@ -25,11 +29,11 @@ function FirstSction() {
                     </Link>
 
 
-                    <Link href="/leaderboard/contact">
-                        <Button variant={'primaryOutline'} size={'sm'}>
+                   
+                        <Button variant={'primaryOutline'} size={'sm'} onClick={handleClick}>
                             See how it works
                         </Button>
-                    </Link>
+                   
                 </div>
             </div>
 

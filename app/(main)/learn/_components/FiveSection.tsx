@@ -91,6 +91,10 @@ const FiveSection = () => {
     const handleDotClick = (index: any) => {
         setActiveImageIndex(index);
     }
+
+    const handleClick = ()=>{
+        window.open('/learn/overview');
+    }
   return (
     <div className="py-20 xl:py-24 flex justify-center items-center flex-col bg-[#f5baee] ">
             <div className="text-3xl w-3/4 xl:text-5xl font-medium xl:w-1/2 text-center">
@@ -99,8 +103,8 @@ const FiveSection = () => {
             <div className="py-4 px-10 xl:w-1/2 2xl:w-1/3 md:w-2/3 text-center">
                 Our vibrant community produces content, teaches courses, and leads events all over the world.
             </div>
-            <Button className="text-sky-500 flex items-center hover:underline hover:cursor-pointer">
-                Learn more<PiArrowRight className="ml-3 text-sm" />
+            <Button className="text-sky-500 flex items-center hover:underline hover:cursor-pointer" onClick={handleClick}>
+                Overview <PiArrowRight className="ml-3 text-sm" />
             </Button>
             <div className="grid grid-cols-12 md:row-span-2 gap-4 xl:gap-6 mt-8 px-8 md:px-16 xl:px-0 xl:w-3/4 2xl:w-[55%] mx-auto md:w-full">
                 {

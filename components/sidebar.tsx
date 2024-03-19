@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -17,6 +18,9 @@ type Props = {
 };
 
 export const Sidebar = ({ className }: Props) => {
+  const handleClick = ()=>{
+     window.open("/quests")
+  }
   return (
     <div className={cn(
       "flex h-full lg:w-[256px] lg:fixed left-0 top-0 px-4 border-r-2 flex-col",
@@ -46,6 +50,7 @@ export const Sidebar = ({ className }: Props) => {
           label="quests" 
           href="/quests"
           iconSrc="/quests.svg"
+          onClick ={handleClick}
         />
         <SidebarItem 
           label="shop" 

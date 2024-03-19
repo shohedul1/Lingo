@@ -1,12 +1,17 @@
 'use client';
 import { Button } from "@/components/ui/button";
 import { CalendarDays, CalendarMinus, Check } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 
 
 const FirstSection = () => {
     const [isActivePlan, setIsActivePlan] = useState(true);
+   
+
+    const handleButtonClick = () => {
+        window.open('mailto:shohidulpramanik94@gmail.com');
+        window.location.reload();
+    };
 
 
     return (
@@ -165,17 +170,17 @@ const FirstSection = () => {
                         <div className="text-2xl">Premuin</div>
                         <div className="text-lg">For Teams that need to crete project plans with confidence</div>
                         {isActivePlan ? (
-                           <div className="text-5xl font-semibol">US$12.99</div>
-                        ):(
+                            <div className="text-5xl font-semibol">US$12.99</div>
+                        ) : (
                             <div className="text-5xl font-semibol">US$99.99</div>
                         )}
                         <div className="text-md">Per User,per month billed annually $144</div>
                         <div className="text-center">
-                           <Link href={"/leaderboard/contact"}>
-                           <Button variant={'default'} className="w-full">
-                                Contact Sales
-                            </Button>
-                           </Link>
+                           
+                                <Button variant={'default'} className="w-full" onClick={handleButtonClick}>
+                                    Contact Sales
+                                </Button>
+                           
                         </div>
 
                         <div className="text-2xl underline text-center">Purchase Now</div>
@@ -291,17 +296,21 @@ const FirstSection = () => {
                         <div className="text-2xl">Business</div>
                         <div className="text-lg">For Teams that need to crete project plans with confidence</div>
                         {isActivePlan ? (
-                           <div className="text-5xl font-semibol">US$49.99</div>
-                        ):(
+                            <div className="text-5xl font-semibol">US$49.99</div>
+                        ) : (
                             <div className="text-5xl font-semibol">US$599.99</div>
                         )}
                         <div className="text-md">Per User,per month billed annually $144</div>
                         <div className="text-center">
-                          <Link href={"/leaderboard/contact"}>
-                          <Button variant={'super'} className="w-full">
-                                Contact Sales
+
+                          
+                            <Button variant={'super'} className="w-full" onClick={handleButtonClick}>
+                               
+                                    Contact Sales
+                                
                             </Button>
-                          </Link>
+
+
                         </div>
 
                         <div className="text-2xl underline text-center">Purchase Now</div>
